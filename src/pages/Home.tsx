@@ -1,10 +1,22 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import PodcastList from "../components/PodcastList";
+import { getPodcasts } from "../services/podcasts";
+import { Podcast } from "../types";
+
+interface HomeState {
+  podcasts: Array<Podcast>
+}
 
 const Home = () => {
+
+  const [podcasts, setPodcast] = useState<HomeState["podcasts"]>([])
+
+  useEffect(() => {
+    getPodcasts().then(setPodcast)
+  }, [])
+
   return(
-    <Link to="/podcast/001">
-      <p>Podcast</p>
-    </Link>
+    <PodcastList podcasts={podcasts} />
   );
 }
 
