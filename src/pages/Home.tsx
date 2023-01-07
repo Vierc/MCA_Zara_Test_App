@@ -1,18 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import PodcastList from "../components/PodcastList";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 import { getPodcasts } from "../services/podcasts";
-import { Podcast } from "../types";
-
-interface HomeState {
-  podcasts: Array<Podcast>
-}
 
 const Home = () => {
 
-  const [podcasts, setPodcast] = useState<HomeState["podcasts"]>([])
+  const [podcasts, setPodcast] = useLocalStorage("podcasts", [])
 
   useEffect(() => {
-    getPodcasts().then(setPodcast)
+    if(podcasts.length < 1) getPodcasts().then(setPodcast)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return(

@@ -8,19 +8,17 @@ import Episode from './pages/Episode';
 
 function App() {
   return (
-    <React.StrictMode>
-      <BrowserRouter>
-        <Header />
-        <main className="container">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/podcast/:podcastId" element={<Podcast />} />
-            <Route path="/podcast/:podcastId/episode/:episodeId" element={<Episode />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </main>
-      </BrowserRouter>
-    </React.StrictMode>
+    <BrowserRouter>
+      <Header />
+      <main className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/podcast/:podcastId" element={<Podcast />} />
+          <Route path="/podcast/:podcastId/episode/:episodeId" element={<Episode />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
   );
 }
 
