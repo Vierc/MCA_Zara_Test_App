@@ -1,21 +1,14 @@
-import { useEffect } from "react";
 import PodcastList from "../components/PodcastList";
 import Search from "../components/Search";
-import { useLocalStorage } from "../hooks/useLocalStorage";
-import { getPodcasts } from "../services/podcasts";
+import { usePodcasts } from "../hooks/usePodcasts";
 
 const Home = () => {
 
-  const [podcasts, setPodcast] = useLocalStorage("podcasts", [])
-
-  useEffect(() => {
-    if(podcasts.length < 1) getPodcasts().then(setPodcast)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  const { podcasts } = usePodcasts()
 
   return(
     <div>
-      <Search />
+      <Search podcasts={podcasts} />
       <PodcastList podcasts={podcasts} />
     </div>
   );

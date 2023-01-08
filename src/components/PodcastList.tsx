@@ -1,4 +1,3 @@
-import { useAppSelector } from "../store/store";
 import { Podcast } from "../types";
 
 interface Props {
@@ -7,15 +6,10 @@ interface Props {
 
 const PodcastList = ({podcasts}: Props) => {
 
-  const filter = useAppSelector(state => state.podcastFilter.filterText)
-
   return(
     <ul>
       {
-        podcasts.filter(podcast => {
-          return filter ? podcast.title.toLowerCase().includes(filter.toLowerCase()) || podcast.author.toLowerCase().includes(filter.toLowerCase()) : true
-        })
-        .map(podcast => {
+        podcasts.map(podcast => {
           return (
             <li key={podcast.id}>
               <img src={podcast.image} alt={`Podcast ${podcast.title}`} />
