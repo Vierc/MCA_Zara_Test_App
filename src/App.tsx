@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <main className="container">
+      <main className="main-container">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/podcast/:podcastId" element={<Podcast />} />

@@ -1,5 +1,6 @@
 .header {
   padding: 10px;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .headerContainer {
@@ -11,4 +12,6 @@
 
 h1 {
   display: inline;
+  color: #477cbd;
+  font-size: 1.2rem;
 }

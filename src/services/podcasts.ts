@@ -17,7 +17,7 @@ const mapFromApiResponse = (apiResponse: PodcastsResponseFromApi): Array<Podcast
   return apiResponse.feed.entry.map(apiPodcast => {
     const podcast = {
       id: apiPodcast.id.attributes["im:id"],
-      image: apiPodcast["im:image"]?.filter(img => img.attributes?.height === "55")[0]?.label, // height HARCODED!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+      image: apiPodcast["im:image"]?.filter(img => img.attributes?.height === "170")[0]?.label,
       title: apiPodcast["im:name"]?.label,
       author: apiPodcast["im:artist"]?.label
     }

@@ -1,0 +1,21 @@
+.searchContainer {
+  width: 100%;
+  padding: 20px;
+  text-align: right;
+}
+
+.totalItems {
+  background-color: #477cbd;
+  color: #ffffff;
+  padding: 2px 4px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.searchInput {
+  width: 200px;
+  padding: 8px 10px;
+  margin: 0 10px;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 5px;
+}
