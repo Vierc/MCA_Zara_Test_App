@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import PodcastList from "../components/PodcastList";
+import Search from "../components/Search";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { getPodcasts } from "../services/podcasts";
 
@@ -13,7 +14,10 @@ const Home = () => {
   }, [])
 
   return(
-    <PodcastList podcasts={podcasts} />
+    <div>
+      <Search />
+      <PodcastList podcasts={podcasts} />
+    </div>
   );
 }
 
