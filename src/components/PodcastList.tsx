@@ -16,7 +16,7 @@ const PodcastList = ({podcasts}: Props) => {
           return (
             <li key={podcast.id} className={styles.podcastList}>
               <Link to={"/podcast/" + podcast.id}>
-                <div className={styles.podcastBox}>
+                <div className={'box-shadow ' + styles.podcastBox}>
                   <img className={styles.podcastImg} src={podcast.image} alt={`Podcast ${podcast.title}`} />
                   <h4>{podcast.title.toUpperCase()}</h4>
                   <p className={styles.podcastAuthor}>{i18n.HOME.PODCAST_AUTHOR + ' ' + podcast.author}</p>

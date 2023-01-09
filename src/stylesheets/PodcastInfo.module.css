@@ -1,0 +1,39 @@
+.podcastCard {
+  padding: 10px;
+  font-size: .8rem;
+}
+
+.podcastImage {
+  width: 70%;
+  display:block;
+  margin: 0 auto 10px auto;
+  border-radius: 4px;
+}
+
+hr {
+  height: 1px;
+  background-color: #e8e8e8;
+  border: none;
+  margin: 10px 0;
+}
+
+.podcastTitle {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 20px;
+  margin: 0 5px;
+}
+
+.podcastAuthor {
+  margin: 0 5px;
+  color: #505050;
+}
+
+.podcastDescriptionTitle {
+  font-size: .9em;
+}
+
+.podcastDescription {
+  margin-top: 5px;
+  font-size: .8em;
+}

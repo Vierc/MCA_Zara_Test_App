@@ -15,7 +15,7 @@ export interface Episode {
   description: string
   url: string
   date: string
-  duration: number
+  duration: string
 }
 
 /*

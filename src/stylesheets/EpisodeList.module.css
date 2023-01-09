@@ -1,0 +1,34 @@
+.episodesHeader {
+  font-size: 1rem;
+  padding: 10px;
+}
+.customTable {
+  margin-top: 20px;
+  padding: 20px;
+  font-size: .8rem;
+}
+
+.customTable table {
+  border-collapse:collapse;
+  width: 100%;
+}
+
+.customTable table thead tr {
+  text-align: left;
+  font-size: .9em;
+  border-bottom: 2px solid #e8e8e8;
+}
+
+.customTable table th,
+.customTable table td {
+  padding: .4em;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.customTable table tbody tr:nth-of-type(odd) {
+  background-color: #fafafa;
+}
+
+.customTable table tbody a {
+  color: #477cbd;
+}

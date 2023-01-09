@@ -39,14 +39,29 @@ const mapPodcastsFromApiResponse = (apiResponse: PodcastsResponseFromApi): Array
 
 const mapEpisodesFromApiResponse = (apiResponse: EpisodesResponseFromApi): Array<Episode> => {
   return apiResponse.results.filter(result => result.episodeUrl).map(apiEpisode => {
+    const date = new Date(apiEpisode.releaseDate)
     const episode = {
       id: apiEpisode.trackId.toString(),
       name: apiEpisode.trackName,
       description: apiEpisode.description,
       url: apiEpisode.episodeUrl,
-      date: apiEpisode.releaseDate,
-      duration: apiEpisode.trackTimeMillis
+      date: date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear(),
+      duration: msToStringTime(apiEpisode.trackTimeMillis)
     }
     return episode
   })
+}
+
+function msToStringTime(duration: number) {
+  let seconds = Math.floor((duration / 1000) % 60),
+    minutes = Math.floor((duration / (1000 * 60)) % 60),
+    hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
+
+  hours = (hours < 10) ? 0 + hours : hours;
+  minutes = (minutes < 10) ? 0 + minutes : minutes;
+  seconds = (seconds < 10) ? 0 + seconds : seconds;
+
+  const minutesString = "00".substring(minutes.toString().length) + minutes
+  const secondsString = "00".substring(seconds.toString().length) + seconds
+  return hours ? hours + ":" + minutesString + ":" + secondsString :  minutesString + ":" + secondsString;
 }
