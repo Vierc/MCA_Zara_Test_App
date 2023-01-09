@@ -4,7 +4,7 @@ import { useAppSelector } from "../store/store";
 import { Podcast } from "../types";
 import { useLocalStorage } from "./useLocalStorage";
 
-export function usePodcasts () {
+export function usePodcastList () {
 
   const [allPodcasts, setAllPodcast] = useLocalStorage("podcasts", [])
   const { filterText } = useAppSelector(state => state.podcastFilter)

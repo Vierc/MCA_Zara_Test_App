@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Podcast } from "../types";
-import styles from "../stylesheets/Podcasts.module.css";
+import styles from "../stylesheets/PodcastList.module.css";
 import i18n from "../i18n/index";
 
 interface Props {

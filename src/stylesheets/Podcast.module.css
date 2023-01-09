@@ -1,0 +1,6 @@
+.podcastGrid {
+  display: grid;
+  grid-template-columns: 170px auto;
+  gap: 80px;
+  padding: 20px;
+}

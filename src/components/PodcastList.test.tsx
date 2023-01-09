@@ -10,7 +10,8 @@ describe("PodcastList Component", () => {
       id: "001",
       image: "https://url/",
       title: "Title",
-      author: "Author"
+      author: "Author",
+      summary: "Summary"
     }
   ]
   const { container } = render(<PodcastList podcasts={podcasts} />)

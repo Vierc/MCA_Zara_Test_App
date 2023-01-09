@@ -1,10 +1,10 @@
 import PodcastList from "../components/PodcastList";
 import Search from "../components/Search";
-import { usePodcasts } from "../hooks/usePodcasts";
+import { usePodcastList } from "../hooks/usePodcastList";
 
 const Home = () => {
 
-  const { podcasts } = usePodcasts()
+  const { podcasts } = usePodcastList()
 
   return(
     <div>

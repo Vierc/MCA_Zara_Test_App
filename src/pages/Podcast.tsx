@@ -1,10 +1,14 @@
-import { Link } from "react-router-dom";
+import EpisodeList from "../components/EpisodeList";
+import PodcastInfo from "../components/PodcastInfo";
+import styles from "../stylesheets/Podcast.module.css";
 
 const Podcast = () => {
+
   return(
-    <Link to="/podcast/001/episode/001">
-      <p>Episode</p>
-    </Link>
+    <div className={styles.podcastGrid}>
+      <PodcastInfo />
+      <EpisodeList />
+    </div>
   );
 }
 
