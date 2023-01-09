@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEpisode } from "../hooks/useEpisode";
-import styles from "../stylesheets/EpisodeInfo.module.css";
+import styles from "../stylesheets/Episode.module.css";
 
-const EpisodeInfo = () => {
+const Episode = () => {
 
   const { podcastId, episodeId } = useParams();
   const episode = useEpisode(podcastId || '', episodeId || '')
@@ -22,4 +22,4 @@ const EpisodeInfo = () => {
   );
 }
 
-export default EpisodeInfo;
+export default Episode;

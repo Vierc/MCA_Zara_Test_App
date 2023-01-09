@@ -30,7 +30,7 @@ const EpisodeList = () => {
                 return (
                   <tr key={episode.id}>
                     <td>
-                      <Link to={"/podcast/"+podcastId+"/episode/"+episode.id}>
+                      <Link to={`episode/${episode.id}`}>
                         {episode.name}
                       </Link>
                     </td>

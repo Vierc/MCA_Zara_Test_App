@@ -4,7 +4,8 @@ import './App.css';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Podcast from './pages/Podcast';
-import Episode from './pages/Episode';
+import EpisodeList from './components/EpisodeList';
+import Episode from './components/Episode';
 
 function App() {
   return (
@@ -13,8 +14,10 @@ function App() {
       <main className="main-container">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/podcast/:podcastId" element={<Podcast />} />
-          <Route path="/podcast/:podcastId/episode/:episodeId" element={<Episode />} />
+          <Route path="/podcast/:podcastId" element={<Podcast />}>
+            <Route path="" element={<EpisodeList />} />
+            <Route path="episode/:episodeId" element={<Episode />} />
+          </Route>
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

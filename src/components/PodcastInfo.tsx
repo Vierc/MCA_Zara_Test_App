@@ -11,7 +11,7 @@ const PodcastInfo = () => {
   return(
     <div>
       <div className={'box-shadow ' + styles.podcastCard}>
-        <Link to={"/podcast/" + podcastId}>
+        <Link to={""}>
           <img 
             className={styles.podcastImage} 
             src={podcast.image} 
@@ -19,7 +19,7 @@ const PodcastInfo = () => {
           />
         </Link>
         <hr/>
-        <Link to={"/podcast/" + podcastId}>
+        <Link to={""}>
           <h2 className={styles.podcastTitle}>{podcast.title}</h2>
           <p className={styles.podcastAuthor}><i>{i18n.PODCAST.PODCAST_AUTHOR + ' ' + podcast.author}</i></p>
         </Link>
