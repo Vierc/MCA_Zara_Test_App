@@ -1,0 +1,15 @@
+.episodeBox {
+  padding: 15px;
+}
+
+.episodeDescription {
+  margin: 10px 0px 20px 0px;
+  font-size: .8rem;
+  font-style: italic;
+  color: #505050;
+}
+
+.episodePlayer {
+  margin-top: 10px;
+  width: 100%;
+}

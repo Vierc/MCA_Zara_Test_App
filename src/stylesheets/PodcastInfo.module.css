@@ -10,13 +10,6 @@
   border-radius: 4px;
 }
 
-hr {
-  height: 1px;
-  background-color: #e8e8e8;
-  border: none;
-  margin: 10px 0;
-}
-
 .podcastTitle {
   font-size: 1em;
   font-weight: bold;

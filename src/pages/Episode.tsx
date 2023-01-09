@@ -1,7 +1,14 @@
+import EpisodeInfo from "../components/EpisodeInfo";
+import PodcastInfo from "../components/PodcastInfo";
+import styles from "../stylesheets/Podcast.module.css";
 
 const Episode = () => {
+
   return(
-    <p>Episode</p>
+    <div className={styles.podcastGrid}>
+      <PodcastInfo />
+      <EpisodeInfo />
+    </div>
   );
 }
 
