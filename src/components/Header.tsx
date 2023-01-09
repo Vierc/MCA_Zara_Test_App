@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "../stylesheets/Header.module.css";
+import Loading from "./Loading";
 
 const Header = () => {
   return(
@@ -8,6 +9,7 @@ const Header = () => {
         <Link to="/">
           <h1>Podcaster</h1>
         </Link>
+        <Loading />
       </div>
     </header>
   );

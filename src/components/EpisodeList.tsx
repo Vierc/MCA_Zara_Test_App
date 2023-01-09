@@ -1,13 +1,12 @@
-import { Link, useParams } from "react-router-dom";
-import { useEpisodeList } from "../hooks/useEpisodeList";
+import { Link } from "react-router-dom";
 import { Episode } from "../types";
 import i18n from "../i18n/index";
 import styles from "../stylesheets/EpisodeList.module.css";
+import { useAppSelector } from "../store/store";
 
 const EpisodeList = () => {
 
-  const { podcastId } = useParams();
-  const [ episodes ] = useEpisodeList(podcastId || '')
+  const { episodes } = useAppSelector(state => state.episodes)
 
   return(
     <div>

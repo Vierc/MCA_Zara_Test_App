@@ -1,12 +1,11 @@
 import i18n from "../i18n/index";
-import { Link, useParams } from "react-router-dom";
-import { usePodcast } from "../hooks/usePodcast";
+import { Link } from "react-router-dom";
 import styles from "../stylesheets/PodcastInfo.module.css";
+import { useAppSelector } from "../store/store";
 
 const PodcastInfo = () => {
 
-  const { podcastId } = useParams();
-  const podcast = usePodcast(podcastId || '');
+  const { podcast } = useAppSelector(state => state.podcast)
 
   return(
     <div>

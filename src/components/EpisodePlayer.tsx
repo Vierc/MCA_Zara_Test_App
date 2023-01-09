@@ -1,11 +1,13 @@
 import { useParams } from "react-router-dom";
-import { useEpisode } from "../hooks/useEpisode";
+import { useAppSelector } from "../store/store";
 import styles from "../stylesheets/Episode.module.css";
+import { Episode } from "../types";
 
-const Episode = () => {
+const EpisodePlayer = () => {
 
-  const { podcastId, episodeId } = useParams();
-  const episode = useEpisode(podcastId || '', episodeId || '')
+  const { episodeId } = useParams();
+  const { episodes } = useAppSelector(state => state.episodes)
+  const episode = episodes.filter( episode => episode.id === episodeId )[0] || {} as Episode
 
   return(
     <div>
@@ -22,4 +24,4 @@ const Episode = () => {
   );
 }
 
-export default Episode;
+export default EpisodePlayer;
