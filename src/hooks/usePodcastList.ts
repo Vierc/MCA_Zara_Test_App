@@ -20,6 +20,11 @@ export function usePodcastList () {
       dispatch(setLoading(false))
     }
     fetchData().catch(console.error)
+
+    return () => {
+      //This is triggered when a component unmounts from the DOM
+      dispatch(setLoading(true))
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
