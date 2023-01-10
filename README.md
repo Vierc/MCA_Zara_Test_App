@@ -1,6 +1,6 @@
 # MCA Hiring Test
-This is a test project for a recruitment process that simulates a web app to listen the 100 most popular podcasts according to the Apple list.
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and the libraries [react-redux](https://github.com/reduxjs/react-redux), [react-router-dom](https://github.com/remix-run/react-router) and [axios](https://github.com/axios/axios).
+This is a test project for a recruitment process that simulates a web app to listen to the 100 most popular podcasts according to the Apple list.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [react-redux](https://github.com/reduxjs/react-redux), [react-router-dom](https://github.com/remix-run/react-router) and [axios](https://github.com/axios/axios) libraries.
 
 ## Runs the app in the development mode.
 
