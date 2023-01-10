@@ -2,6 +2,8 @@
 This is a test project for a recruitment process that simulates a web app to listen to the 100 most popular podcasts according to the Apple list.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [react-redux](https://github.com/reduxjs/react-redux), [react-router-dom](https://github.com/remix-run/react-router) and [axios](https://github.com/axios/axios) libraries.
 
+In order to make requests to the external api, it is necessary to access external services that do not provide JSONP or CORS headers. To do this you can activate these services from [cors-anywhere](https://cors-anywhere.herokuapp.com/).
+
 ## Runs the app in the development mode.
 
 In the project directory, you can run:
