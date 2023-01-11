@@ -7,7 +7,7 @@ const Loading = () => {
 
   return(
     <div>
-      {loading && <div className={styles.loading}>
+      {loading && <div id="loading" className={styles.loading}>
         <div className={styles.loadingDot}></div>
         <div className={styles.loadingDot}></div>
       </div>}
