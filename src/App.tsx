@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, BrowserRouter, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Home from './pages/Home';
@@ -9,7 +9,7 @@ import EpisodePlayer from './components/EpisodePlayer';
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <Header />
       <main className="main-container">
         <Routes>
@@ -21,7 +21,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
-    </BrowserRouter>
+    </>
   );
 }
 

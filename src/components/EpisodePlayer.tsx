@@ -16,7 +16,7 @@ const EpisodePlayer = () => {
         <p className={styles.episodeDescription} dangerouslySetInnerHTML={{__html: episode.description}}></p>
         <hr/>
         <audio controls className={styles.episodePlayer}>
-          <source src={episode.url} type="audio/mpeg" />
+          <source id="audioPlayer" src={episode.url} type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
       </div>

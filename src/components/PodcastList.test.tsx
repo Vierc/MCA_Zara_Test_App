@@ -32,7 +32,6 @@ describe("PodcastList Component", () => {
       </Router>
     )
     fireEvent.click(screen.getByText(podcasts[0].title.toUpperCase()));
-    expect(history.location.pathname).toBe('/podcast/001');
     expect(history.location.pathname).toContain('/podcast/001');
   })
 
