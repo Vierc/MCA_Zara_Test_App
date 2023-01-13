@@ -45,7 +45,7 @@ describe("App Component", () => {
     history.push('/podcast/001');
     const { container } = render(
       <Provider store={store}>
-        <Router  location={history.location} navigator={history}>
+        <Router location={history.location} navigator={history}>
           <App />
         </Router>
       </Provider>
@@ -62,7 +62,7 @@ describe("App Component", () => {
     history.push('/podcast/001/episode/001');
     const { container } = render(
       <Provider store={store}>
-        <Router  location={history.location} navigator={history}>
+        <Router location={history.location} navigator={history}>
           <App />
         </Router>
       </Provider>
